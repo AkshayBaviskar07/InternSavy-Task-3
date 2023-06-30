@@ -1,39 +1,67 @@
 package com.crud;
 
 public class Employee {
-    private int empId;
-    private String empName;
-    private String empEmail;
-    private float empSalary;
+	private int id;
+	private String name;
+	private String email;
+	private int salary;
+	
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", salary=" + salary + "]";
+	}
 
-    Employee(){    }
+	public Employee() {
+		super();
+	}
 
-    Employee(String empName, String empEmail, Float empSalary){
-        this.empEmail = empEmail;
-        this.empName = empName;
-        this.empSalary = empSalary;
-    }
+	public Employee(int id, String name, String email, int salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.salary = salary;
+	}
 
-    Employee(int empId ,String empName, String empEmail, Float empSalary){
-        this.empId = empId;
-        this.empEmail = empEmail;
-        this.empName = empName;
-        this.empSalary = empSalary;
-    }
+	public Employee(String name, String email, int salary) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.salary = salary;
+	}
 
-    public int getId(){
-        return empId;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getName(){
-        return empName;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getEmail(){
-        return empEmail;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public float getSalary(){
-        return empSalary;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	
+	
+	
 }
